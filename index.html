@@ -35,14 +35,67 @@
         id="teamCard"
       ></section>
       <!-- form section -->
-      <section>
-        <form action="" id="htmlForm">
-          <input type="text" name="" id="name" />
-          <input type="text" name="" id="role" />
-          <input type="text" name="" id="email" />
-          <input type="text" name="" id="img" />
-          <button type="submit" id="submitter">Add</button>
-          <button type="reset">Cancel</button>
+      <section class="container mx-auto max-w-screen-xl">
+        <h2 class="mt-10 text-center text-xl">Add a team member</h2>
+        <form action="" id="htmlForm" class="mx-auto max-w-lg">
+          <div class="flex justify-center gap-3 py-4">
+            <div>
+              <label for="name" class="block"> Name </label>
+              <input
+                type="text"
+                name=""
+                id="name"
+                placeholder="Jane Doe"
+                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+              />
+            </div>
+            <div>
+              <label for="name" class="block"> Role </label>
+              <input
+                placeholder="intern"
+                type="text"
+                name=""
+                id="role"
+                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+              />
+            </div>
+          </div>
+          <div class="flex justify-center gap-3 py-4">
+            <div>
+              <label for="name" class="block"> Email </label>
+              <input
+                placeholder="janedoe@team.com"
+                type="email"
+                name=""
+                id="email"
+                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+              />
+            </div>
+            <div>
+              <label for="name" class="block"> Photo </label>
+              <input
+                type="text"
+                name=""
+                id="img"
+                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+              />
+            </div>
+          </div>
+          <div class="flex justify-center gap-3 py-4">
+            <button
+              type="submit"
+              id="submitter"
+              class="btn-primary rounded px-3 py-1 text-white hover:bg-white"
+            >
+              Add
+            </button>
+            <button
+              type="reset"
+              class="btn-secondary rounded px-3 py-1 text-sm hover:underline"
+            >
+              Cancel
+            </button>
+          </div>
         </form>
       </section>
     </main>

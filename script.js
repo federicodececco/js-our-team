@@ -64,10 +64,10 @@ cardSection.innerHTML = sectionArray
 
 formElm.addEventListener('submit', function (event) {
   event.preventDefault()
-  const nameElm = document.getElementById('name')
-  const roleElm = document.getElementById('role')
-  const emailElm = document.getElementById('email')
-  const imgElm = document.getElementById('img')
+  const nameElm = document.getElementById('name').value
+  const roleElm = document.getElementById('role').value
+  const emailElm = document.getElementById('email').value
+  const imgElm = document.getElementById('img').value
   const newMember = {
     name: nameElm,
     role: roleElm,
