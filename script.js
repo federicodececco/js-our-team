@@ -81,3 +81,10 @@ formElm.addEventListener('submit', function (event) {
   }
   cardSection.innerHTML = sectionArray
 })
+const reset = document.getElementById('reset')
+reset.addEventListener('click', () => {
+  document.getElementById('name').innerHTML = ''
+  document.getElementById('email').innerHTML = ''
+  document.getElementById('img').innerHTML = ''
+  document.getElementById('role').innerHTML = ''
+})
