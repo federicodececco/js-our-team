@@ -1,9 +1,12 @@
 module.exports = {
-    content: [
-      './**/*.html', // Adjust if needed
-    ],
-    theme: {
-      extend: {},
+  content: [
+    './**/*.html', // Adjust if needed
+  ],
+  theme: {
+    container: {
+      center: true,
     },
-    plugins: [],
-  };
+    extend: {},
+  },
+  plugins: [],
+}
