@@ -57,11 +57,8 @@ const teamMembers = [
 
 let sectionArray = ''
 
-for (let i = 0; i < teamMembers.length; i++) {
-  sectionArray += createCard(teamMembers[i])
-}
-cardSection.innerHTML = sectionArray
-
+htmlPrint = teamMembers.map(createCard).join('')
+cardSection.innerHTML = htmlPrint
 formElm.addEventListener('submit', function (event) {
   event.preventDefault()
   const nameElm = document.getElementById('name').value
