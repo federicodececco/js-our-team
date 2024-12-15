@@ -8,7 +8,7 @@ const createCard = struct => {
   <div class="basis-1/3">
     <img src="./${img}" alt="" />
   </div>
-  <div class="p-3 text-white">
+  <div class="p-3 text-white dark:text-slate-100">
     <h4 class="text-2xl font-semibold">${name}</h4>
     <p class="pt-2">${role}</p>
     <p class="email pt-3">${email}</p>
