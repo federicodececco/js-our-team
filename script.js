@@ -59,23 +59,18 @@ let sectionArray = ''
 
 htmlPrint = teamMembers.map(createCard).join('')
 cardSection.innerHTML = htmlPrint
-formElm.addEventListener('submit', function (event) {
+formElm.addEventListener('submit', event => {
   event.preventDefault()
-  const nameElm = document.getElementById('name').value
-  const roleElm = document.getElementById('role').value
-  const emailElm = document.getElementById('email').value
-  const imgElm = document.getElementById('img').value
   const newMember = {
-    name: nameElm,
-    role: roleElm,
-    email: emailElm,
-    img: imgElm,
+    name: document.getElementById('name').value,
+    role: document.getElementById('role').value,
+    email: document.getElementById('email').value,
+    img: document.getElementById('img').value,
   }
   teamMembers.push(newMember)
   sectionArray = ''
-  for (let i = 0; i < teamMembers.length; i++) {
-    sectionArray += createCard(teamMembers[i])
-  }
+  sectionArray = teamMembers.map(createCard).join('')
+
   cardSection.innerHTML = sectionArray
 })
 const reset = document.getElementById('reset')
