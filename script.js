@@ -4,7 +4,7 @@ const cardSection = document.getElementById('teamCard')
 
 const createCard = struct => {
   const { name, role, email, img } = struct
-  const card = `<div class="flex bg-black  ">
+  const card = `<div class="flex bg:black dark:bg-slate-800  ">
   <div class="basis-1/3">
     <img src="./${img}" alt="" />
   </div>

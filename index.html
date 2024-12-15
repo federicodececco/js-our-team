@@ -13,7 +13,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="dark:bg-slate-950">
     <header>
       <h1 class="title mt-10 text-center text-4xl font-extrabold">
         Meet our Team
@@ -21,85 +21,86 @@
     </header>
     <!-- hero section -->
     <section class="mx-auto my-10 max-w-screen-xl text-center">
-      <p>
+      <p class="dark:text-slate-100 ">
+    
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam magnam
         corrupti consequuntur pariatur voluptatum vel autem ex ratione non
         necessitatibus mollitia, officia, voluptatem unde dolores totam laborum
         repellat, dignissimos molestiae.
       </p>
     </section>
-    <main class="container mx-auto max-w-screen-xl">
+    <main class=" container mx-auto max-w-screen-xl p-4 ">
       <!-- team cards -->
       <section
-        class="mx-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3"
+        class="  grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3"
         id="teamCard"
-      ></section>
-      <!-- form section -->
-      <section class="container mx-auto max-w-screen-xl">
-        <h2 class="title mt-10 text-center text-xl">Add a team member</h2>
-        <form action="" id="htmlForm" class="mx-auto max-w-lg">
-          <div class="flex justify-center gap-3 py-4">
-            <div>
-              <label for="name" class="block"> Name </label>
-              <input
-                type="text"
-                name=""
-                id="name"
-                placeholder="Jane Doe"
-                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
-              />
-            </div>
-            <div>
-              <label for="name" class="block"> Role </label>
-              <input
-                placeholder="intern"
-                type="text"
-                name=""
-                id="role"
-                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
-              />
-            </div>
-          </div>
-          <div class="flex justify-center gap-3 py-4">
-            <div>
-              <label for="name" class="block"> Email </label>
-              <input
-                placeholder="janedoe@team.com"
-                type="email"
-                name=""
-                id="email"
-                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
-              />
-            </div>
-            <div>
-              <label for="name" class="block"> Photo </label>
-              <input
-                type="text"
-                name=""
-                id="img"
-                class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
-              />
-            </div>
-          </div>
-          <div class="flex justify-center gap-3 py-4">
-            <button
-              type="submit"
-              id="submitter"
-              class="btn-primary rounded px-3 py-1 text-white hover:bg-white"
-            >
-              Add
-            </button>
-            <button
-              type="reset"
-              class="btn-secondary rounded px-3 py-1 text-sm hover:underline"
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
-      </section>
+      >
     </main>
-
+  </section>
+  <!-- form section -->
+  <section class="container mx-auto max-w-screen-xl">
+    <h2 class="title mt-10 text-center text-xl">Add a team member</h2>
+    <form action="" id="htmlForm" class="mx-auto max-w-lg">
+      <div class="flex justify-center gap-3 py-4">
+        <div>
+          <label for="name" class="block"> Name </label>
+          <input
+            type="text"
+            name=""
+            id="name"
+            placeholder="Jane Doe"
+            class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+          />
+        </div>
+        <div>
+          <label for="name" class="block"> Role </label>
+          <input
+            placeholder="intern"
+            type="text"
+            name=""
+            id="role"
+            class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+          />
+        </div>
+      </div>
+      <div class="flex justify-center gap-3 py-4">
+        <div>
+          <label for="name" class="block"> Email </label>
+          <input
+            placeholder="janedoe@team.com"
+            type="email"
+            name=""
+            id="email"
+            class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+          />
+        </div>
+        <div>
+          <label for="name" class="block"> Photo </label>
+          <input
+            type="text"
+            name=""
+            id="img"
+            class="focus: bord rounded-sm bg-slate-200 p-1 px-2 focus:bg-white"
+          />
+        </div>
+      </div>
+      <div class="flex justify-center gap-3 py-4">
+        <button
+          type="submit"
+          id="submitter"
+          class="btn-primary rounded px-3 py-1 text-white hover:bg-white"
+        >
+          Add
+        </button>
+        <button
+          type="reset"
+          class="btn-secondary rounded px-3 py-1 text-sm hover:underline"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </section>
     <script src="./script.js"></script>
   </body>
 </html>
