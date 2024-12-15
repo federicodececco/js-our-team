@@ -4,7 +4,7 @@ const cardSection = document.getElementById('teamCard')
 
 const createCard = struct => {
   const { name, role, email, img } = struct
-  const card = `<div class="flex bg-black basis-[calc(33.333%-1rem)] ">
+  const card = `<div class="flex bg-black  ">
   <div class="basis-1/3">
     <img src="./${img}" alt="" />
   </div>
