@@ -2,7 +2,7 @@ const formElm = document.getElementById('htmlForm')
 
 const cardSection = document.getElementById('teamCard')
 
-class person {
+class Person {
   #infos
   constructor(name, role, email, img) {
     this.#infos = [name, role, email, img]
@@ -10,11 +10,11 @@ class person {
   getName() {
     return this.#infos[0]
   }
-  getRole() {
-    return this.#infos[2]
-  }
   getEmail() {
     return this.#infos[1]
+  }
+  getRole() {
+    return this.#infos[2]
   }
   getImg() {
     return this.#infos[3]
@@ -36,37 +36,37 @@ const createCard = struct => {
   return card
 }
 const teamMembers = [
-  new person(
+  new Person(
     'Marco bianchi',
     'marcobianchi@team.com',
     'Designer',
     'img/male1.png',
   ),
-  new person(
+  new Person(
     'Laura Rossi',
     'laurarossi@team.com',
     'Front-end Developer',
     'img/female1.png',
   ),
-  new person(
+  new Person(
     'giorgio verdi',
     'giorgioverdi@team.com',
     'Back-end Developer',
     'img/male2.png',
   ),
-  new person(
+  new Person(
     'Marta Ipsum',
     'martarossi@team.com',
     'SEO Specialist',
     'img/female2.png',
   ),
-  new person(
+  new Person(
     'Roberto Lorem',
     'robertolorem@team.com',
     'SEO Specialist',
     'img/male3.png',
   ),
-  new person(
+  new Person(
     'Daniela Amet',
     'danielaamet@team.com',
     'Analyst',
@@ -76,7 +76,7 @@ const teamMembers = [
 
 let sectionArray = ''
 
-htmlPrint = teamMembers.map(createCard).join('')
+const htmlPrint = teamMembers.map(createCard).join('')
 cardSection.innerHTML = htmlPrint
 formElm.addEventListener('submit', event => {
   event.preventDefault()
