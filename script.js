@@ -1,26 +1,49 @@
 const formElm = document.getElementById('htmlForm')
-
 const cardSection = document.getElementById('teamCard')
-
+/**
+ * Class that contains the names, photoes and contacts medium of team members
+ * along their position within the organization
+ */
 class Person {
   #infos
   constructor(name, role, email, img) {
     this.#infos = [name, role, email, img]
   }
+  /**
+   * method to read the name of the member
+   * @returns {string} - the name of the person
+   */
   getName() {
     return this.#infos[0]
   }
+  /**
+   * method to read the email of the member
+   * @returns {string} - the email of the person
+   */
   getEmail() {
     return this.#infos[1]
   }
+  /**
+   * method to read the role of the member inside of the team
+   * @returns {string} - the role of the person
+   */
   getRole() {
     return this.#infos[2]
   }
+  /**
+   * method to read the photo of the member
+   * @returns {string} - the photo of the person
+   */
   getImg() {
     return this.#infos[3]
   }
 }
-
+/**
+ *function that uses the elemnts of the Person class to create a
+ *an HTML/css structure to be injected in the index file, made to avoid repetition
+ * @param {object} struct - must be a Person class element
+ * @returns a string of HTML code
+ */
 const createCard = struct => {
   const { name, role, email, img } = struct
   const card = `<div class="flex bg:black dark:bg-slate-800  ">
@@ -75,7 +98,6 @@ const teamMembers = [
 ]
 
 let sectionArray = ''
-
 const htmlPrint = teamMembers.map(createCard).join('')
 cardSection.innerHTML = htmlPrint
 formElm.addEventListener('submit', event => {
@@ -88,9 +110,7 @@ formElm.addEventListener('submit', event => {
   )
   sectionArray = ''
   teamMembers.push(newPerson)
-
   sectionArray = teamMembers.map(createCard).join('')
-
   cardSection.innerHTML = sectionArray
 })
 const reset = document.getElementById('reset')
